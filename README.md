@@ -1,4 +1,4 @@
-# Philosophy Info Extractor App
+# Philosophy Info Extractor 
 
 A comprehensive AI-powered tool for extracting, analyzing, and processing philosophical information from various sources. This application provides advanced prompt generation, data extraction, and CSV processing capabilities for philosophical research and analysis.
 
