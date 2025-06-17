@@ -1,0 +1,112 @@
+"""Philosophy type definitions for extraction and analysis"""
+
+# Major branches of philosophy
+PHILOSOPHY_BRANCHES = [
+    "metaphysics",
+    "epistemology",
+    "ethics",
+    "logic",
+    "aesthetics",
+    "political philosophy",
+    "philosophy of mind",
+    "philosophy of language",
+    "philosophy of science",
+    "philosophy of religion",
+    "ontology",
+    "axiology",
+    "philosophy of history",
+    "philosophy of mathematics",
+    "philosophy of education"
+]
+
+# Historical periods of philosophy
+PHILOSOPHY_PERIODS = [
+    "Ancient Greek",
+    "Hellenistic",
+    "Roman",
+    "Medieval",
+    "Renaissance",
+    "Early Modern",
+    "Enlightenment",
+    "German Idealism",
+    "19th Century",
+    "20th Century",
+    "Contemporary",
+    "Analytic",
+    "Continental",
+    "Postmodern",
+    "Eastern"
+]
+
+# Major philosophical movements and schools
+PHILOSOPHY_MOVEMENTS = [
+    "Platonism",
+    "Aristotelianism",
+    "Stoicism",
+    "Epicureanism",
+    "Skepticism",
+    "Neoplatonism",
+    "Scholasticism",
+    "Rationalism",
+    "Empiricism",
+    "Idealism",
+    "Materialism",
+    "Existentialism",
+    "Pragmatism",
+    "Phenomenology",
+    "Structuralism",
+    "Post-structuralism",
+    "Analytic Philosophy",
+    "Continental Philosophy",
+    "Marxism",
+    "Feminism",
+    "Postmodernism",
+    "Confucianism",
+    "Taoism",
+    "Buddhism",
+    "Vedanta"
+]
+
+# Common philosophical concepts
+PHILOSOPHY_CONCEPTS = [
+    "being",
+    "consciousness",
+    "truth",
+    "knowledge",
+    "reality",
+    "existence",
+    "mind",
+    "soul",
+    "freedom",
+    "justice",
+    "morality",
+    "beauty",
+    "good",
+    "evil",
+    "time",
+    "space",
+    "causality",
+    "identity",
+    "meaning",
+    "language",
+    "reason",
+    "experience",
+    "perception",
+    "intuition",
+    "dialectic",
+    "paradox",
+    "contradiction",
+    "essence",
+    "existence",
+    "substance",
+    "form",
+    "matter",
+    "spirit",
+    "nature",
+    "culture",
+    "society",
+    "history",
+    "progress",
+    "change",
+    "eternity"
+] 
