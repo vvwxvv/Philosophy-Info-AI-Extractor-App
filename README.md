@@ -1,0 +1,1 @@
+# Philosophy-Info-AI-Extractor-App
