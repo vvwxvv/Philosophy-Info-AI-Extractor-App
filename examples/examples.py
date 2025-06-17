@@ -1,4 +1,5 @@
-# Import the enhanced modules
+"""Philosophy prompt generation examples using existing API."""
+
 from extractors.generator import AdvancedPhilosophyPromptBuilder
 from extractors.config import PhilosophyExtractorConfig
 from extractors.types import (
@@ -9,24 +10,17 @@ from extractors.types import (
     PhilosophicalCategory,
 )
 
-from prompts.print_prompt_section import print_prompt_section
-
 
 class PhilosophyPromptExamples:
-    """Examples of prompt generation for different philosophical scenarios"""
+    """Examples of prompt generation for different philosophical scenarios."""
 
     def __init__(self):
         self.prompt_builder = AdvancedPhilosophyPromptBuilder()
 
     def generate_basic_philosophy_prompt(self):
-        """Generate a basic philosophy extraction prompt"""
-
-        # Sample text snippet (just for context, not full analysis)
-        sample_text = (
-            "The categorical imperative is Kant's central philosophical concept..."
-        )
-
-        # Generate prompt for basic extraction
+        """Generate a basic philosophy extraction prompt."""
+        sample_text = "The categorical imperative is Kant's central philosophical concept..."
+        
         prompt = self.prompt_builder.build_prompt(
             text=sample_text,
             template_name="philosophy_basic",
@@ -34,19 +28,19 @@ class PhilosophyPromptExamples:
             depth_level="basic",
             target_audience="general",
         )
-
-        print_prompt_section("Basic Philosophy", prompt)
+        
+        print("\n--- Basic Philosophy Prompt ---")
+        print(prompt[:500] + "...\n")
         return prompt
 
     def generate_academic_research_prompt(self):
-        """Generate prompt for academic philosophical research"""
-
+        """Generate prompt for academic philosophical research."""
         sample_text = "In Being and Time, Heidegger explores Dasein's existence..."
-
+        
         prompt = self.prompt_builder.build_prompt(
             text=sample_text,
             template_name="comprehensive",
-            language="mixed",  # Preserve original terms
+            language="mixed",
             extraction_mode="comprehensive",
             depth_level="expert",
             target_audience="academic",
@@ -55,15 +49,15 @@ class PhilosophyPromptExamples:
             include_historical_context=True,
             preserve_original_language=True,
         )
-
-        print_prompt_section("Academic Research", prompt)
+        
+        print("\n--- Academic Research Prompt ---")
+        print(prompt[:500] + "...\n")
         return prompt
 
     def generate_ethical_analysis_prompt(self):
-        """Generate prompt for ethical philosophy analysis"""
-
+        """Generate prompt for ethical philosophy analysis."""
         sample_text = "The trolley problem presents a moral dilemma..."
-
+        
         prompt = self.prompt_builder.build_prompt(
             text=sample_text,
             template_name="philosophy_ethical",
@@ -74,17 +68,15 @@ class PhilosophyPromptExamples:
             custom_focus="moral dilemmas and ethical decision-making",
             include_applications=True,
         )
-
-        print_prompt_section("Ethical Analysis", prompt)
+        
+        print("\n--- Ethical Analysis Prompt ---")
+        print(prompt[:500] + "...\n")
         return prompt
 
     def generate_argument_analysis_prompt(self):
-        """Generate prompt for philosophical argument analysis"""
-
-        sample_text = (
-            "Premise 1: All humans are mortal. Premise 2: Socrates is human..."
-        )
-
+        """Generate prompt for philosophical argument analysis."""
+        sample_text = "Premise 1: All humans are mortal. Premise 2: Socrates is human..."
+        
         prompt = self.prompt_builder.build_prompt(
             text=sample_text,
             template_name="philosophical_argument",
@@ -94,15 +86,15 @@ class PhilosophyPromptExamples:
             include_criticisms=True,
             custom_focus="logical validity and soundness",
         )
-
-        print_prompt_section("Argument Analysis", prompt)
+        
+        print("\n--- Argument Analysis Prompt ---")
+        print(prompt[:500] + "...\n")
         return prompt
 
     def generate_comparative_philosophy_prompt(self):
-        """Generate prompt for comparing philosophical positions"""
-
+        """Generate prompt for comparing philosophical positions."""
         sample_text = "While Plato argues for eternal Forms, Aristotle proposes..."
-
+        
         prompt = self.prompt_builder.build_prompt(
             text=sample_text,
             extraction_mode="comparative",
@@ -111,17 +103,15 @@ class PhilosophyPromptExamples:
             target_audience="educational",
             custom_focus="comparing Platonic and Aristotelian metaphysics",
         )
-
-        print_prompt_section("Comparative Philosophy", prompt)
+        
+        print("\n--- Comparative Philosophy Prompt ---")
+        print(prompt[:500] + "...\n")
         return prompt
 
     def generate_historical_philosophy_prompt(self):
-        """Generate prompt for historical philosophical analysis"""
-
-        sample_text = (
-            "The Enlightenment period saw a shift in philosophical thinking..."
-        )
-
+        """Generate prompt for historical philosophical analysis."""
+        sample_text = "The Enlightenment period saw a shift in philosophical thinking..."
+        
         prompt = self.prompt_builder.build_prompt(
             text=sample_text,
             template_name="historical_philosophy",
@@ -132,15 +122,15 @@ class PhilosophyPromptExamples:
             include_influences=True,
             include_historical_context=True,
         )
-
-        print_prompt_section("Historical Philosophy", prompt)
+        
+        print("\n--- Historical Philosophy Prompt ---")
+        print(prompt[:500] + "...\n")
         return prompt
 
     def generate_concept_analysis_prompt(self):
-        """Generate prompt for philosophical concept analysis"""
-
+        """Generate prompt for philosophical concept analysis."""
         sample_text = "The concept of 'authenticity' in existentialism refers to..."
-
+        
         prompt = self.prompt_builder.build_prompt(
             text=sample_text,
             template_name="philosophical_concept",
@@ -149,15 +139,15 @@ class PhilosophyPromptExamples:
             depth_level="expert",
             custom_focus="existentialist conception of authenticity",
         )
-
-        print_prompt_section("Concept Analysis", prompt)
+        
+        print("\n--- Concept Analysis Prompt ---")
+        print(prompt[:500] + "...\n")
         return prompt
 
     def generate_philosopher_profile_prompt(self):
-        """Generate prompt for philosopher profile extraction"""
-
+        """Generate prompt for philosopher profile extraction."""
         sample_text = "Jean-Paul Sartre (1905-1980) was a French existentialist..."
-
+        
         prompt = self.prompt_builder.build_prompt(
             text=sample_text,
             template_name="philosopher_profile",
@@ -166,15 +156,15 @@ class PhilosophyPromptExamples:
             include_influences=True,
             include_historical_context=True,
         )
-
-        print_prompt_section("Philosopher Profile", prompt)
+        
+        print("\n--- Philosopher Profile Prompt ---")
+        print(prompt[:500] + "...\n")
         return prompt
 
     def generate_exploratory_prompt(self):
-        """Generate prompt for exploratory philosophical analysis"""
-
+        """Generate prompt for exploratory philosophical analysis."""
         sample_text = "What does it mean to live a good life? Different cultures..."
-
+        
         prompt = self.prompt_builder.build_prompt(
             text=sample_text,
             extraction_mode="exploratory",
@@ -182,17 +172,15 @@ class PhilosophyPromptExamples:
             target_audience="general",
             extract_implicit_content=True,
         )
-
-        print_prompt_section("Exploratory Philosophy", prompt)
+        
+        print("\n--- Exploratory Philosophy Prompt ---")
+        print(prompt[:500] + "...\n")
         return prompt
 
     def generate_critical_analysis_prompt(self):
-        """Generate prompt for critical philosophical analysis"""
-
-        sample_text = (
-            "The hard problem of consciousness challenges physicalist theories..."
-        )
-
+        """Generate prompt for critical philosophical analysis."""
+        sample_text = "The hard problem of consciousness challenges physicalist theories..."
+        
         prompt = self.prompt_builder.build_prompt(
             text=sample_text,
             extraction_mode="critical",
@@ -202,39 +190,36 @@ class PhilosophyPromptExamples:
             include_criticisms=True,
             custom_focus="evaluating arguments about consciousness",
         )
-
-        print_prompt_section("Critical Analysis", prompt)
+        
+        print("\n--- Critical Analysis Prompt ---")
+        print(prompt[:500] + "...\n")
         return prompt
 
 
 def demonstrate_prompt_customization():
-    """Demonstrate how to customize prompts for specific needs"""
-
+    """Demonstrate how to customize prompts for specific needs."""
     builder = AdvancedPhilosophyPromptBuilder()
-
-    print(
-        """
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                     CUSTOMIZATION EXAMPLES                        │
-└─────────────────────────────────────────────────────────────────────────────┘
-"""
-    )
-
+    
+    print("\n========== CUSTOMIZATION EXAMPLES ==========\n")
+    
     # Example 1: Minimal prompt for quick extraction
-    print("\n▸ 1. MINIMAL PROMPT (Quick extraction)")
-    print("  " + "─" * 40)
-
+    print("1. MINIMAL PROMPT (Quick extraction)")
+    print("-" * 40)
+    
     config = PhilosophyExtractorConfig.create_for_use_case(
-        "quick_analysis", source_type=PhilosophySourceType.ESSAY, language="EN"
+        "quick_analysis",
+        source_type=PhilosophySourceType.ESSAY,
+        language="EN"
     )
-
+    
+    # Note: Using actual method from your code
     prompt = builder.prompt_generator.generate(config)
-    print("  " + prompt[:500].replace("\n", "\n  ") + "...")
-
+    print(prompt[:500] + "...\n")
+    
     # Example 2: Detailed prompt with specific focus
-    print("\n\n▸ 2. DETAILED PROMPT (Specific philosophical school)")
-    print("  " + "─" * 40)
-
+    print("\n2. DETAILED PROMPT (Specific philosophical school)")
+    print("-" * 40)
+    
     config = PhilosophyExtractorConfig(
         template="comprehensive",
         source_type=PhilosophySourceType.TREATISE,
@@ -247,14 +232,14 @@ def demonstrate_prompt_customization():
             "Identify Heideggerian influences",
         ],
     )
-
+    
     prompt = builder.prompt_generator.generate(config)
-    print("  " + prompt[:500].replace("\n", "\n  ") + "...")
-
+    print(prompt[:500] + "...\n")
+    
     # Example 3: Educational prompt
-    print("\n\n▸ 3. EDUCATIONAL PROMPT (For teaching)")
-    print("  " + "─" * 40)
-
+    print("\n3. EDUCATIONAL PROMPT (For teaching)")
+    print("-" * 40)
+    
     config = PhilosophyExtractorConfig.create_for_use_case(
         "academic_research",
         target_audience=TargetAudience.EDUCATIONAL,
@@ -266,24 +251,17 @@ def demonstrate_prompt_customization():
             "Include learning objectives",
         ],
     )
-
+    
     prompt = builder.prompt_generator.generate(config)
-    print("  " + prompt[:500].replace("\n", "\n  ") + "...")
+    print(prompt[:500] + "...\n")
 
 
 def demonstrate_template_suggestions():
-    """Demonstrate template suggestion system"""
-
+    """Demonstrate template suggestion system."""
     builder = AdvancedPhilosophyPromptBuilder()
-
-    print(
-        """
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                      TEMPLATE SUGGESTION EXAMPLES                        │
-└─────────────────────────────────────────────────────────────────────────────┘
-"""
-    )
-
+    
+    print("\n========== TEMPLATE SUGGESTION EXAMPLES ==========\n")
+    
     # Test texts for different scenarios
     test_scenarios = [
         {
@@ -303,36 +281,31 @@ def demonstrate_template_suggestions():
             "use_case": None,
         },
     ]
-
+    
     for i, scenario in enumerate(test_scenarios, 1):
-        print(f"\n▸ {i}. Text: '{scenario['text'][:50]}...'")
-        print(f"     Use case: {scenario['use_case'] or 'Not specified'}")
-
+        print(f"{i}. Text: '{scenario['text'][:50]}...'")
+        print(f"   Use case: {scenario['use_case'] or 'Not specified'}")
+        
         suggestion = builder.suggest_template(
-            text=scenario["text"], use_case=scenario["use_case"]
+            text=scenario["text"],
+            use_case=scenario["use_case"]
         )
-
-        print(f"     • Recommended: {suggestion['recommended']}")
-        print(f"     • Confidence: {suggestion['confidence']:.2f}")
-        print(f"     • Reasoning: {suggestion['reasoning']}")
-
+        
+        print(f"   Recommended: {suggestion['recommended']}")
+        print(f"   Confidence: {suggestion['confidence']:.2f}")
+        print(f"   Reasoning: {suggestion['reasoning']}")
+        
         if suggestion["alternatives"]:
-            print(f"     • Alternatives: {', '.join(suggestion['alternatives'])}")
+            print(f"   Alternatives: {', '.join(suggestion['alternatives'])}")
+        print()
 
 
 def generate_batch_prompts():
-    """Generate prompts for batch processing different text types"""
-
+    """Generate prompts for batch processing different text types."""
     builder = AdvancedPhilosophyPromptBuilder()
-
-    print(
-        """
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                       BATCH PROMPT GENERATION                            │
-└─────────────────────────────────────────────────────────────────────────────┘
-"""
-    )
-
+    
+    print("\n========== BATCH PROMPT GENERATION ==========\n")
+    
     # Different text types to process
     text_types = [
         {
@@ -372,36 +345,34 @@ def generate_batch_prompts():
             },
         },
     ]
-
+    
     prompts = []
-
+    
     for text_type in text_types:
-        print(f"\n▸ Generating prompt for: {text_type['name']}")
-        print("  " + "─" * 40)
-
-        prompt = builder.build_prompt(text=text_type["sample"], **text_type["config"])
-
-        prompts.append({"type": text_type["name"], "prompt": prompt})
-
-        # Show first 300 characters of prompt
-        print("  " + prompt[:300].replace("\n", "\n  ") + "...")
-
+        print(f"Generating prompt for: {text_type['name']}")
+        print("-" * 40)
+        
+        prompt = builder.build_prompt(
+            text=text_type["sample"],
+            **text_type["config"]
+        )
+        
+        prompts.append({
+            "type": text_type["name"],
+            "prompt": prompt
+        })
+        
+        print(prompt[:300] + "...\n")
+    
     return prompts
 
 
 def generate_validation_and_enhancement_prompts():
-    """Generate prompts for validation and enhancement tasks"""
-
+    """Generate prompts for validation and enhancement tasks."""
     builder = AdvancedPhilosophyPromptBuilder()
-
-    print(
-        """
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                  ✓ VALIDATION AND ENHANCEMENT PROMPTS                       │
-└─────────────────────────────────────────────────────────────────────────────┘
-"""
-    )
-
+    
+    print("\n========== VALIDATION AND ENHANCEMENT PROMPTS ==========\n")
+    
     # Sample extracted data for validation
     sample_extraction = {
         "main_thesis": "Knowledge is justified true belief",
@@ -409,47 +380,40 @@ def generate_validation_and_enhancement_prompts():
         "philosophical_tradition": "Epistemology",
         "missing_fields": ["counterarguments", "historical_context"],
     }
-
+    
     original_text = "The traditional analysis of knowledge as justified true belief..."
-
+    
     # Generate validation prompt
-    print("\n▸ 1. VALIDATION PROMPT")
-    print("  " + "─" * 40)
+    print("1. VALIDATION PROMPT")
+    print("-" * 40)
     validation_prompt = builder.build_validation_prompt(
         extracted_data=sample_extraction,
         original_text=original_text,
         template_name="philosophy_basic",
     )
-    print("  " + validation_prompt.replace("\n", "\n  "))
-
+    print(validation_prompt + "\n")
+    
     # Generate enhancement prompt
-    print("\n▸ 2. ENHANCEMENT PROMPT")
-    print("  " + "─" * 40)
+    print("2. ENHANCEMENT PROMPT")
+    print("-" * 40)
     enhancement_prompt = builder.build_enhancement_prompt(
         partial_data=sample_extraction,
         missing_fields=sample_extraction["missing_fields"],
         text=original_text,
     )
-    print("  " + enhancement_prompt.replace("\n", "\n  "))
+    print(enhancement_prompt + "\n")
 
 
 def main():
-    """Run all prompt generation examples"""
-
-    print(
-        """
-╭─────────────────────────────────────────────────────────────────────────────╮
-│                   PHILOSOPHY PROMPT GENERATION EXAMPLES                  │
-│                                                                             │
-│  Demonstrating prompt generation for various philosophical scenarios        │
-│  No actual extraction performed - only showing generated prompts            │
-╰─────────────────────────────────────────────────────────────────────────────╯
-"""
-    )
-
+    """Run all prompt generation examples."""
+    print("\nPHILOSOPHY PROMPT GENERATION EXAMPLES")
+    print("=" * 60)
+    print("Demonstrating prompt generation for various philosophical scenarios")
+    print("No actual extraction performed - only showing generated prompts\n")
+    
     # Create example generator
     examples = PhilosophyPromptExamples()
-
+    
     # Generate prompts for different scenarios
     scenarios = [
         ("Basic Philosophy", examples.generate_basic_philosophy_prompt),
@@ -463,62 +427,53 @@ def main():
         ("Exploratory Analysis", examples.generate_exploratory_prompt),
         ("Critical Analysis", examples.generate_critical_analysis_prompt),
     ]
-
+    
     # Generate each type of prompt
     generated_prompts = {}
     for name, generator_func in scenarios:
-        print(f"\n{'─' * 80}")
+        print(f"\n{'=' * 60}")
         print(f"Generating: {name}")
-        print("─" * 80)
+        print("=" * 60)
         try:
             prompt = generator_func()
             generated_prompts[name] = prompt
         except Exception as e:
-            print(f"❌ Error generating {name} prompt: {e}")
-
+            print(f"Error generating {name} prompt: {e}")
+    
     # Additional demonstrations
     demonstrate_prompt_customization()
     demonstrate_template_suggestions()
     batch_prompts = generate_batch_prompts()
     generate_validation_and_enhancement_prompts()
-
+    
     # Summary
-    print(
-        """
-╔═════════════════════════════════════════════════════════════════════════════╗
-║                               SUMMARY                                     ║
-╚═════════════════════════════════════════════════════════════════════════════╝
-"""
-    )
-    print(f"  ✓ Total prompts generated: {len(generated_prompts)}")
-    print(f"  ✓ Batch prompts generated: {len(batch_prompts)}")
-    print("\n  Available templates:")
+    print("\n" + "=" * 60)
+    print("SUMMARY")
+    print("=" * 60)
+    print(f"Total prompts generated: {len(generated_prompts)}")
+    print(f"Batch prompts generated: {len(batch_prompts)}")
+    print("\nAvailable templates:")
     for template in examples.prompt_builder.list_available_templates():
-        print(f"    • {template['name']}: {template['description']}")
-
+        print(f"  - {template['name']}: {template['description']}")
+    
     return generated_prompts
 
 
 if __name__ == "__main__":
     # Simple usage - generate a single prompt
     builder = AdvancedPhilosophyPromptBuilder()
-
+    
     # Quick prompt generation
     quick_prompt = builder.build_prompt(
         text="What is the meaning of existence?",
         extraction_mode="exploratory",
         target_audience="general",
     )
-
-    print(
-        """
-╭─────────────────────────────────────────────────────────────────────────────╮
-│                         QUICK PROMPT EXAMPLE                                │
-╰─────────────────────────────────────────────────────────────────────────────╯
-"""
-    )
+    
+    print("\nQUICK PROMPT EXAMPLE")
+    print("=" * 60)
     print(quick_prompt)
-
+    
     # Run all examples
-    print("\n\n🚀 RUNNING ALL EXAMPLES...")
+    print("\n\nRUNNING ALL EXAMPLES...")
     all_prompts = main()
