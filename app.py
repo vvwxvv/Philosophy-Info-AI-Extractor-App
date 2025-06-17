@@ -1,3 +1,22 @@
+
+"""
+Philosophy Information AI Extractor - Simple Demo Application
+
+This application demonstrates the philosophy prompt generation capabilities
+by importing and running examples from the examples module.
+"""
+
+import sys
+import os
+
+# Add the project root to the path to ensure imports work
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
+from examples.examples import (
+    PhilosophyPromptExamples,
+    demonstrate_prompt_customization,
+    demonstrate_template_suggestions,
+    generate_batch_prompts,
     generate_validation_and_enhancement_prompts,
     main as run_all_examples,
 )
